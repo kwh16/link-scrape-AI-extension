@@ -1,0 +1,46 @@
+{
+  "../../../../../../@crx/manifest": {
+    "file": "assets/crx-manifest.js-C8li73Cz.js",
+    "name": "crx-manifest.js",
+    "src": "../../../../../../@crx/manifest",
+    "isEntry": true
+  },
+  "_chunk-CZOpNEXY.js": {
+    "file": "assets/chunk-CZOpNEXY.js",
+    "name": "chunk"
+  },
+  "_index.ts-loader-DwozfVAZ.js": {
+    "file": "assets/index.ts-loader-DwozfVAZ.js",
+    "src": "_index.ts-loader-DwozfVAZ.js"
+  },
+  "index.html": {
+    "file": "assets/index.html-DTfkzNiH.js",
+    "name": "index.html",
+    "src": "index.html",
+    "isEntry": true,
+    "imports": [
+      "_chunk-CZOpNEXY.js"
+    ],
+    "css": [
+      "assets/index-C6G_3qQV.css"
+    ]
+  },
+  "src/background/index.ts": {
+    "file": "assets/index.ts-BsGMMn0r.js",
+    "name": "index.ts",
+    "src": "src/background/index.ts",
+    "isEntry": true,
+    "imports": [
+      "_chunk-CZOpNEXY.js"
+    ]
+  },
+  "src/content/index.ts": {
+    "file": "assets/index.ts-DrqRhHS1.js",
+    "name": "index.ts",
+    "src": "src/content/index.ts",
+    "isEntry": true,
+    "imports": [
+      "_chunk-CZOpNEXY.js"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube History AI Filter",
+  "version": "1.0.0",
+  "description": "Filter YouTube history using Gemini AI",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/index.ts-loader-DwozfVAZ.js"
+      ],
+      "matches": [
+        "https://www.youtube.com/feed/history*"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "resources": [
+        "assets/chunk-CZOpNEXY.js",
+        "assets/index.ts-DrqRhHS1.js"
+      ],
+      "use_dynamic_url": false
+    }
+  ]
+}
