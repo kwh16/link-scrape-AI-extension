@@ -9,12 +9,8 @@
     "file": "assets/chunk-CZOpNEXY.js",
     "name": "chunk"
   },
-  "_index.ts-loader-DwozfVAZ.js": {
-    "file": "assets/index.ts-loader-DwozfVAZ.js",
-    "src": "_index.ts-loader-DwozfVAZ.js"
-  },
   "index.html": {
-    "file": "assets/index.html-DTfkzNiH.js",
+    "file": "assets/index.html-BZ5lkFSO.js",
     "name": "index.html",
     "src": "index.html",
     "isEntry": true,
@@ -35,12 +31,9 @@
     ]
   },
   "src/content/index.ts": {
-    "file": "assets/index.ts-DrqRhHS1.js",
+    "file": "assets/index.ts-zmLbXejx.js",
     "name": "index.ts",
     "src": "src/content/index.ts",
-    "isEntry": true,
-    "imports": [
-      "_chunk-CZOpNEXY.js"
-    ]
+    "isEntry": true
   }
 }

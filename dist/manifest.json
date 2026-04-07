@@ -9,7 +9,7 @@
   "content_scripts": [
     {
       "js": [
-        "assets/index.ts-loader-DwozfVAZ.js"
+        "assets/index.ts-zmLbXejx.js"
       ],
       "matches": [
         "https://www.youtube.com/feed/history*"
@@ -31,8 +31,7 @@
         "https://www.youtube.com/*"
       ],
       "resources": [
-        "assets/chunk-CZOpNEXY.js",
-        "assets/index.ts-DrqRhHS1.js"
+        "assets/index.ts-zmLbXejx.js"
       ],
       "use_dynamic_url": false
     }

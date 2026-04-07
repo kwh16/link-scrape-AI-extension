@@ -3,37 +3,37 @@
 要件定義書に基づいて開発を進めやすいように、機能ごとにタスクを分割しています。上から順に進めることで、スムーズに実装とテストが行えるように設計しています。
 
 ## タスク1: 開発環境の構築とベースの作成
-* [ ] Vite (React + TypeScript) プロジェクトの初期化
-* [ ] Tailwind CSS のインストールと初期設定
-* [ ] `@crxjs/vite-plugin` (または同等のManifest V3対応プラグイン)の導入とビルド設定
-* [ ] `manifest.json` の作成と権限設定 (`activeTab`, `scripting`, `storage`等の記述)
-* [ ] `src/popup`, `src/content`, `src/background` ディレクトリの準備と空ファイルの作成
-* [ ] PopupのHello World表示と、拡張機能としてのブラウザ読み込みテスト（動作確認）
+* [x] Vite (React + TypeScript) プロジェクトの初期化
+* [x] Tailwind CSS のインストールと初期設定
+* [x] `@crxjs/vite-plugin` (または同等のManifest V3対応プラグイン)の導入とビルド設定
+* [x] `manifest.json` の作成と権限設定 (`activeTab`, `scripting`, `storage`等の記述)
+* [x] `src/popup`, `src/content`, `src/background` ディレクトリの準備と空ファイルの作成
+* [x] PopupのHello World表示と、拡張機能としてのブラウザ読み込みテスト（動作確認）
 
 ## タスク2: Popup UIのモックアップ作成 (フロントエンド)
-* [ ] Gemini APIを利用する前の、静的なチャットUIをTailwind CSSで構築
-  * [ ] ヘッダー部分の実装
-  * [ ] チャットメッセージのリスト表示エリア（ユーザー吹き出し・AI吹き出し）
-  * [ ] 下部のテキスト入力フォームと送信ボタン
-  * [ ] ローディング中を示すUI（スピナーなどのコンポーネント）
-* [ ] Reactの `useState` を用いた、一時的なメッセージ配列の管理と表示の切り替え
+* [x] Gemini APIを利用する前の、静的なチャットUIをTailwind CSSで構築
+  * [x] ヘッダー部分の実装
+  * [x] チャットメッセージのリスト表示エリア（ユーザー吹き出し・AI吹き出し）
+  * [x] 下部のテキスト入力フォームと送信ボタン
+  * [x] ローディング中を示すUI（スピナーなどのコンポーネント）
+* [x] Reactの `useState` を用いた、一時的なメッセージ配列の管理と表示の切り替え
 
 ## タスク3: Content Scriptの実装（スクレイピング処理）
-* [ ] 対象ページ (`https://www.youtube.com/feed/history`) での起動確認ロジック作成
-* [ ] 自動スクロールロジックの実装（例: `window.scrollTo` を利用して画面下部へ移動）
-  * [ ] 1回のスクロールごとにDOMのレンダリングを待つ遅延処理（`setTimeout`など）
-  * [ ] ループ処理または再帰処理により「10回」実行する仕組みの実装
-* [ ] 動画要素データの抽出ロジック（DOM解析）
-  * [ ] タイトル (`title`)
-  * [ ] URL (`url`)
-  * [ ] チャンネル名 (`channel`)
-* [ ] 抽出データをJSON配列としてフォーマットする処理
-* [ ] 単体動作テスト（ブラウザのコンソール等で直接実行してデータが取れるか確認）
+* [x] 対象ページ (`https://www.youtube.com/feed/history`) での起動確認ロジック作成
+* [x] 自動スクロールロジックの実装（例: `window.scrollTo` を利用して画面下部へ移動）
+  * [x] 1回のスクロールごとにDOMのレンダリングを待つ遅延処理（`setTimeout`など）
+  * [x] ループ処理または再帰処理により「10回」実行する仕組みの実装
+* [x] 動画要素データの抽出ロジック（DOM解析）
+  * [x] タイトル (`title`)
+  * [x] URL (`url`)
+  * [x] チャンネル名 (`channel`)
+* [x] 抽出データをJSON配列としてフォーマットする処理
+* [x] 単体動作テスト（ブラウザのコンソール等で直接実行してデータが取れるか確認）
 
 ## タスク4: 拡張機能内のメッセージング処理 (Popup ↔ Content)
-* [ ] PopupからContent Scriptへ「スクレイピング実行」のメッセージ(`chrome.tabs.sendMessage`)を送信する処理
-* [ ] Content Script側でメッセージを受信し、タスク3の処理を実行して結果を返すレスポンス処理の実装
-* [ ] Popupコンポーネント側で、YouTubeの履歴ページにいるかどうかの判別機能を追加(`chrome.tabs.query`)し、履歴ページ以外ならチャットに警告を表示
+* [x] PopupからContent Scriptへ「スクレイピング実行」のメッセージ(`chrome.tabs.sendMessage`)を送信する処理
+* [x] Content Script側でメッセージを受信し、タスク3の処理を実行して結果を返すレスポンス処理の実装
+* [x] Popupコンポーネント側で、YouTubeの履歴ページにいるかどうかの判別機能を追加(`chrome.tabs.query`)し、履歴ページ以外ならチャットに警告を表示
 
 ## タスク5: Gemini API連携（フェーズ1・意図確認）
 * [ ] `@google/genai` のインストール、または `fetch` によるAPI通信クラスの作成
